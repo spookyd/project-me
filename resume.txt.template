@@ -1,0 +1,44 @@
+{{basics.name}}
+{{basics.label}}
+
+{{basics.location.address}}
+{{basics.location.city}}, {{basics.location.region}} {{basics.location.postalCode}}
+Phone: {{basics.phone}}
+E-mail: {{basics.email}}
+{{basics.profiles}}
+
+{{meta.border}}
+SUMMARY
+{{meta.border}}
+
+{{basics.summary}}
+
+{{meta.border}}
+SKILLS
+{{meta.border}}
+
+{{skills}}
+
+{{meta.border}}
+EXPERIENCE
+{{meta.border}}
+
+{{work}}
+
+{{meta.border}}
+CERTIFICATIONS
+{{meta.border}}
+
+{{certifications}}
+
+{{meta.border}}
+EDUCATION
+{{meta.border}}
+
+{{education}}
+
+{{meta.border}}
+INTERESTS
+{{meta.border}}
+
+{{interests}}
