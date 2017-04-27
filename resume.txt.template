@@ -1,44 +1,44 @@
-{{basics.name}}
-{{basics.label}}
+<<basics.name>>
+<<basics.label>>
 
-{{basics.location.address}}
-{{basics.location.city}}, {{basics.location.region}} {{basics.location.postalCode}}
-Phone: {{basics.phone}}
-E-mail: {{basics.email}}
-{{basics.profiles}}
+<<location.address>>
+<<location.city>>, <<location.region>> <<location.postalCode>>
+Phone: <<basics.phone>>
+E-mail: <<basics.email>>
+<<basics.profiles>>
 
-{{meta.border}}
+<<meta.border>>
 SUMMARY
-{{meta.border}}
+<<meta.border>>
 
-{{basics.summary}}
+<<basics.summary>>
 
-{{meta.border}}
+<<meta.border>>
 SKILLS
-{{meta.border}}
+<<meta.border>>
 
-{{skills}}
+<<skills>>
 
-{{meta.border}}
+<<meta.border>>
 EXPERIENCE
-{{meta.border}}
+<<meta.border>>
 
-{{work}}
+<<work>>
 
-{{meta.border}}
+<<meta.border>>
 CERTIFICATIONS
-{{meta.border}}
+<<meta.border>>
 
-{{certifications}}
+<<certifications>>
 
-{{meta.border}}
+<<meta.border>>
 EDUCATION
-{{meta.border}}
+<<meta.border>>
 
-{{education}}
+<<education>>
 
-{{meta.border}}
+<<meta.border>>
 INTERESTS
-{{meta.border}}
+<<meta.border>>
 
-{{interests}}
+<<interests>>

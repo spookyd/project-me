@@ -11,99 +11,139 @@ BORDER='------------------------------------------------------------------------
 
 namespace :parser do
 
-  desc 'Loads in resume json file'
-  task :load do
-    require 'json'
-    @parsed = JSON.parse(File.read(RESUME_INPUT))
+  def map_resume_to_file_data(resume, file_data)
     # TODO: Validate json
-    format_basics @parsed['basics']
-    format_skills @parsed['skills']
-    format_experience @parsed['work']
-    format_certifications @parsed['certifications']
-    format_education @parsed['education']
-    format_interests @parsed['interests']
+    file_data = replace_data_with_value 'meta.border', BORDER, file_data
+    file_data = format_basics resume['basics'], file_data
+    file_data = format_skills resume['skills'], file_data
+    file_data = format_experience resume['work'], file_data
+    file_data = format_certifications resume['certifications'], file_data
+    file_data = format_education resume['education'], file_data
+    file_data = format_interests resume['interests'], file_data
+    return file_data
   end
 
-  def format_basics(basics)
-    puts basics['name']
-    puts basics['label']
-    format_location basics['location']
-    puts "Phone: #{basics['phone']}"
-    puts "Email: #{basics['email']}"
-    format_profiles basics['profiles']
+  def format_basics(basics, file_data)
+    root_key = 'basics'
+    prop_key = 'name'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key, basics[prop_key], file_data
+    prop_key = 'label'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key, basics[prop_key], file_data
+    prop_key = 'summary'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key, basics[prop_key], file_data
+    prop_key = 'location'
+    file_data = format_location basics[prop_key], file_data
+    prop_key = 'phone'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key, basics[prop_key], file_data
+    prop_key = 'email'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key, basics[prop_key], file_data
+    prop_key = 'profiles'
+    data_key = to_parse_key root_key, prop_key
+    profiles_fmt = build_profiles basics[prop_key]
+    file_data = replace_data_with_value  data_key, profiles_fmt, file_data
+    return file_data
   end
 
-  def format_location(location)
-    puts location['address']
-    puts "#{location['city']}, #{location['region']} #{location['postalCode']}"
+  def format_location(location, file_data)
+    root_key = 'location'
+    prop_key = 'address'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key , location[prop_key], file_data
+    prop_key = 'city'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key , location[prop_key], file_data
+    prop_key = 'region'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key , location[prop_key], file_data
+    prop_key = 'postalCode'
+    data_key = to_parse_key root_key, prop_key
+    file_data = replace_data_with_value  data_key , location[prop_key], file_data
   end
 
-  def format_summary(summary)
-    puts BORDER
-    puts summary
-    puts BORDER
-  end
-
-  def format_profiles(profiles)
+  def build_profiles(profiles)
+    profiles_fmt = ''
     profiles.each { |profile|
-      puts "#{profile['network']}: #{profile['url']}"
+      if !profiles_fmt.empty?
+        profiles_fmt += "\n"
+      end
+      profiles_fmt += "#{profile['network']}: #{profile['url']}"
     }
+    return profiles_fmt
   end
 
-  def format_skills(skills)
-    puts BORDER
-    puts 'SKILLS'
-    puts BORDER
+  def format_skills(skills, file_data)
+    skills_fmt = ''
     skills.each { |skill|
+      if !skills_fmt.empty?
+        skills_fmt += "\n"
+      end
       fmt_keywords = skill['keywords'].reduce('') { |keywords, keyword| keywords.to_s.empty? ? "#{keyword}" : "#{keywords}, #{keyword}" }
-      puts "#{skill['name']}: #{fmt_keywords}"
+      skills_fmt += "#{skill['name']}: #{fmt_keywords}"
     }
+    return replace_data_with_value  'skills', skills_fmt, file_data
   end
 
-  def format_experience(work)
-    puts BORDER
-    puts 'EXPERIENCE'
-    puts BORDER
+  def format_experience(work, file_data)
+    work_fmt = ''
     work.each { |job|
       fmt_highlights = job['highlights'].reduce('') { |highlights, highlight|
         "#{highlights}\n* #{highlight}"
       }
       website = job['website']
       fmt_website = website.to_s.empty? ? '' : " - #{website}"
-      puts "#{job['startDate']} - #{job['endDate']}\n#{job['position']}\n#{job['company']}#{fmt_website}\n#{job['summary']}\n#{fmt_highlights}\n\n"
+      if !work_fmt.empty?
+        work_fmt += "\n"
+      end
+      work_fmt += "#{job['startDate']} - #{job['endDate']}\n#{job['position']}\n#{job['company']}#{fmt_website}\n#{job['summary']}\n#{fmt_highlights}\n"
     }
+    return replace_data_with_value  'work', work_fmt, file_data
   end
 
-  def format_certifications(certs)
-    puts BORDER
-    puts 'CERTIFICATIONS'
-    puts BORDER
+  def format_certifications(certs, file_data)
     certs_fmt = ''
     certs.each { |cert|
-      certs_fmt += "#{cert['date']}\n#{cert['title']}\n#{cert['awarder']}\n\n"
+      if !certs_fmt.empty?
+        certs_fmt += "\n"
+      end
+      certs_fmt += "#{cert['date']}\n#{cert['title']}\n#{cert['awarder']}\n"
     }
-    puts certs_fmt
+    return replace_data_with_value 'certifications', certs_fmt, file_data
   end
 
-  def format_education(education)
-    puts BORDER
-    puts 'EDUCATION'
-    puts BORDER
+  def format_education(education, file_data)
     education_fmt = ''
     education.each { |institute|
-      education_fmt += "#{institute['startDate']} - #{institute['endDate']}\n#{institute['studyType']}, #{institute['area']}\n#{institute['institution']}\nGPA: #{institute['gpa']}\n\n"
+      if !education_fmt.empty?
+        education_fmt += "\n"
+      end
+      education_fmt += "#{institute['startDate']} - #{institute['endDate']}\n#{institute['studyType']}, #{institute['area']}\n#{institute['institution']}\nGPA: #{institute['gpa']}\n"
     }
-    puts education_fmt
+    return replace_data_with_value 'education', education_fmt, file_data
   end
 
-  def format_interests(interests)
-    puts BORDER
-    puts 'INTERESTS'
-    puts BORDER
+  def format_interests(interests, file_data)
+    interest_fmt = ''
     interests.each { |interest|
+      if !interest_fmt.empty?
+        interest_fmt += "\n"
+      end
       fmt_keywords = interest['keywords'].reduce('') { |keywords, keyword| keywords.to_s.empty? ? "#{keyword}" : "#{keywords}, #{keyword}" }
-      puts "#{interest['name']}: #{fmt_keywords}"
+      interest_fmt += "#{interest['name']}: #{fmt_keywords}\n"
     }
+    return replace_data_with_value 'interests', interest_fmt, file_data
+  end
+
+  def to_parse_key(parent, child)
+    "#{parent}.#{child}"
+  end
+
+  def replace_data_with_value(key, value, file_data)
+    return file_data.gsub("<<#{key}>>", value)
   end
 
 end
@@ -127,6 +167,7 @@ namespace :file_management do
   end
 
   def write_data(data, file_name)
+    puts "Writing data #{data} to #{file_name}"
     # open the file for writing
     File.open(file_name, "w") do |f|
       f.write(data)
@@ -153,10 +194,8 @@ task :clean do
 end
 
 def format_template_data(template_file, parsed_json)
-  # load the file as a string
   data = File.read(template_file)
-  # globally substitute "install" for "latest"
-  data.gsub("{{basics.name}}", "Test Me")
+  return map_resume_to_file_data parsed_json, data
 end
 
 def extract_file_name(template)
