@@ -129,20 +129,20 @@
     "gpa": "3.96"
   }],
   "certifications": [{
-    "title": "OCPJP (Oracle Certified Professional Java Programmer)",
-    "date": "2013-07-19",
-    "awarder": "Oracle",
-    "summary": "An Oracle Certified Professional, Java SE 6 Programmer has experience using the Java programming language, understands the basic syntax and structure of the Java programming language and can create Java technology applications that run on server and desktop systems using J2SE 6.0."
+    "title": "Professional Scrum Master™ level I (PSM I)",
+    "date": "2014-08-18",
+    "awarder": "Scrum.org",
+    "summary": "People who have passed PSM I, achieving certification, demonstrate a fundamental level of Scrum mastery. PSM I certificate holders prove that they understand Scrum as described in the Scrum Guide and the concepts of applying Scrum.  PSM I holders have a consistent terminology and approach to Scrum."
   },{
     "title": "Professional Scrum Developer™ (PSD)",
     "date": "2013-08-16",
     "awarder": "Scrum.org",
     "summary": "The Professional Scrum Developer™ (PSD) assessment is available to anyone who wishes to validate their knowledge of how to build complex software products using Scrum. Those that pass the assessment will receive the industry recognized PSD Certification to demonstrate their mastery of the content."
   },{
-    "title": "Professional Scrum Master™ level I (PSM I)",
-    "date": "2014-08-18",
-    "awarder": "Scrum.org",
-    "summary": "People who have passed PSM I, achieving certification, demonstrate a fundamental level of Scrum mastery. PSM I certificate holders prove that they understand Scrum as described in the Scrum Guide and the concepts of applying Scrum.  PSM I holders have a consistent terminology and approach to Scrum."
+    "title": "OCPJP (Oracle Certified Professional Java Programmer)",
+    "date": "2013-07-19",
+    "awarder": "Oracle",
+    "summary": "An Oracle Certified Professional, Java SE 6 Programmer has experience using the Java programming language, understands the basic syntax and structure of the Java programming language and can create Java technology applications that run on server and desktop systems using J2SE 6.0."
   }],
   "skills": [{
     "name": "iOS Development",
@@ -222,6 +222,14 @@
     "level": "Native speaker"
   }],
   "interests": [{
+    "name": "IoT",
+    "keywords": [
+      "Bluetooth 4+",
+      "Raspberry Pi",
+      "Node Red",
+      "Arduino"
+    ]
+  },{
     "name": "Travel",
     "keywords": [
       "Hiking",
@@ -234,14 +242,6 @@
       "Guitar",
       "Keyboard",
       "Theory"
-    ]
-  },{
-    "name": "IoT",
-    "keywords": [
-      "Bluetooth 4+",
-      "Raspberry Pi",
-      "Node Red",
-      "Arduino"
     ]
   }]
 }
