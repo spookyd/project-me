@@ -1,4 +1,5 @@
 #!/bin/ruby
+require 'optparse'
 
 RESUME_INPUT='Resume.json'
 
@@ -14,6 +15,7 @@ namespace :parser do
   task :load do
     require 'json'
     @parsed = JSON.parse(File.read(RESUME_INPUT))
+    # TODO: Validate json
     format_basics @parsed['basics']
     format_skills @parsed['skills']
     format_experience @parsed['work']
@@ -106,10 +108,63 @@ namespace :parser do
 
 end
 
-namespace :txt_builder do
+namespace :file_management do
+
+  require 'fileutils'
+
+  def load_json(file)
+    return JSON.parse(File.read(file))
+  end
+
+  def create_output(directory)
+    unless File.directory?(directory)
+      FileUtils.mkdir_p(directory)
+    end
+  end
+
+  def cp(from, to)
+    FileUtils.cp from to
+  end
+
+  def write_data(data, file_name)
+    # open the file for writing
+    File.open(file_name, "w") do |f|
+      f.write(data)
+    end
+  end
+
+  def rm_rf(dir)
+    FileUtils.rm_rf dir
+  end
 
 end
 
-task :create, [:build_type] do |t, args|
+task :generate_resume do
+  copy_template PLAIN_TEXT_TEMPLATE, OUTPUT_DIR
+  require 'json'
+  parsed_json = load_json RESUME_INPUT
+  formatted_data = format_template_data PLAIN_TEXT_TEMPLATE, parsed_json
+  working_file = extract_file_name PLAIN_TEXT_TEMPLATE
+  write_data formatted_data, "#{OUTPUT_DIR}#{working_file}"
+end
 
+task :clean do
+  rm_rf OUTPUT_DIR
+end
+
+def format_template_data(template_file, parsed_json)
+  # load the file as a string
+  data = File.read(template_file)
+  # globally substitute "install" for "latest"
+  data.gsub("{{basics.name}}", "Test Me")
+end
+
+def extract_file_name(template)
+  template.to_s.gsub('.template', '')
+end
+
+def copy_template(template, output_dest)
+  file_name = extract_file_name template
+  create_output output_dest
+  cp template, "#{output_dest}#{file_name}"
 end
