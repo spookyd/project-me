@@ -181,7 +181,7 @@ namespace :file_management do
 end
 
 task :generate_resume do
-  template = README_TEMPLATE
+  template = PLAIN_TEXT_TEMPLATE
   copy_template template, OUTPUT_DIR
   require 'json'
   parsed_json = load_json RESUME_INPUT

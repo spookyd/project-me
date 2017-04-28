@@ -145,7 +145,10 @@
     "summary": "An Oracle Certified Professional, Java SE 6 Programmer has experience using the Java programming language, understands the basic syntax and structure of the Java programming language and can create Java technology applications that run on server and desktop systems using J2SE 6.0."
   }],
   "awards": {
-
+    "title": "The \"Do the Right Thing\" award",
+    "date": "2013-08-16",
+    "awarder": "The Wendy's Company",
+    "summary": ""
   },
   "skills": [{
     "name": "iOS Development",
