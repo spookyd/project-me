@@ -181,11 +181,12 @@ namespace :file_management do
 end
 
 task :generate_resume do
-  copy_template PLAIN_TEXT_TEMPLATE, OUTPUT_DIR
+  template = README_TEMPLATE
+  copy_template template, OUTPUT_DIR
   require 'json'
   parsed_json = load_json RESUME_INPUT
-  formatted_data = format_template_data PLAIN_TEXT_TEMPLATE, parsed_json
-  working_file = extract_file_name PLAIN_TEXT_TEMPLATE
+  formatted_data = format_template_data template, parsed_json
+  working_file = extract_file_name template
   write_data formatted_data, "#{OUTPUT_DIR}#{working_file}"
 end
 
