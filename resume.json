@@ -38,11 +38,11 @@
     "website": "http://wendys.com",
     "startDate": "2015-06",
     "endDate": "present",
-    "summary": "One of the lead engineers of the Wendy's eCommerce channels including iOS and Android platforms. Provide technical guidance on best development and Scrum practices across the eCommerce Application Department",
+    "summary": "One of the lead engineers on the Wendy's eCommerce Application Development team with primary focus on the iOS and Android platforms. Provide technical guidance on best development and Scrum practices across the eCommerce Application Department.",
     "highlights": [
-      "Lead iOS application refactor of the current Wendy's application involving converting code base from a singular Objective C code base to Swift modules",
-      "Guided Junior and Core members in TDD resulting in a code coverage increase from 6% to 75%",
-      "Partnering with Stakeholders and development team to align requirements on the new Wendy's Loyalty Program",
+      "Led iOS application refactor of the current Wendy's application involving converting code base from a singular Objective C code base to Swift modules",
+      "Guided Junior and Core members in TDD practices; resulting in a code coverage increase from 6% to 75%",
+      "Currently partnering with stakeholders and development team to align requirements on the new Wendy's Loyalty Program",
       "Work directly with UX team to ensure a unified and polished product"
     ]
   },{
@@ -51,10 +51,10 @@
     "website": "http://wendys.com",
     "startDate": "2014-11",
     "endDate": "2015-06",
-    "summary": "Brought in to help form and lead a new eCommerce development team as part of the new Wendy's innovation space, 90º Labs. Worked with the department Director and other lead engineers to establish the foundation of the new department",
+    "summary": "Joined Wendy's to assist in forming and leading a new eCommerce development team as part of the new Wendy's innovation space, 90º Labs. Worked with the department Director and other lead engineers to establish the foundation of the new department",
     "highlights": [
-      "Developed a Kiosk POC which has led to the self-ordering kiosks that are deployed today",
-      "Leveraged Bluetooth Beacons and Geofencing to provide a unique ordering experience for iOS and Android users",
+      "Developed a Kiosk POC, which has led to the self-ordering kiosks that are deployed today",
+      "Leveraged Bluetooth Beacons and Geofencing techniques to provide a unique ordering experience for iOS and Android users",
       "Focused effort on prototyping many of the features now implemented in the Wendy's mobile applications",
       "Instrumental in the development of the products foundation, CI, and Automation Scripts to support the new iOS, Android, and Web applications; https://itunes.apple.com/us/app/wendys/id540518599?mt=8, https://play.google.com/store/apps/details?id=com.wendys.nutritiontool&hl=en"
     ]
@@ -66,9 +66,9 @@
     "endDate": "present",
     "summary": "Partner with software firms to build custom mobile applications and backend services for customers such as Scotts® and Bold Penguin.",
     "highlights": [
-      "Helped develop an Android based door to door sales app which allowed for on the spot credit card acceptance",
+      "Helped develop a custom Android based door to door sales app which allowed for card present credit card transactions",
       "Provided support for existing PHP application used for sales rep management",
-      "Created a API only Rails 5 application used for insurance eligibility rules"
+      "Created an API only Rails 5 application used for an insurance eligibility rules engine"
     ]
   },{
     "company": "Leading EDJE, LLC.",
@@ -76,11 +76,11 @@
     "website": "http://leadingedje.com/",
     "startDate": "2013-02",
     "endDate": "2014-11",
-    "summary": "Member of a Solutions Delivery team, providing expertise in custom applications development and business solutions utilizing leading edge technologies.",
+    "summary": "Member of a solutions delivery team, which provided expertise in custom applications development and business solutions utilizing leading edge technologies.",
     "highlights": [
-      "Worked on client/admin portal project utilizing Java backend and frontend technologies",
-      "Built native Android application and exposed HTTP endpoints using Java technologies, http://www.crown.com/en-us/fleet-management/infolink.html",
-      "Created warehouse management solution proof of concepts using Google Glass and Bluetooth 4.0",
+      "Developed new features on a client/admin portal project utilizing Java backend and frontend technologies",
+      "Built a, native Android, forklift management application; also, exposed HTTP endpoints using Java technologies, http://www.crown.com/en-us/fleet-management/infolink.html",
+      "Created a warehouse fulfillment solution proof of concepts leveraging Google Glass and Bluetooth 4.0",
       "Performed a security audit, based on OWASP for mobile guidelines, for DSW’s eCommerce iOS application"
     ]
   },{
@@ -89,10 +89,10 @@
     "website": "https://www.motoristsinsurancegroup.com/who-we-are/affiliates/motorists-mutual",
     "startDate": "2013-02",
     "endDate": "2011-06",
-    "summary": "Provided support for existing home and life insurance agent portals. Mentored in Android and iOS development, testing, and deployment.",
+    "summary": "Supported and developed new features for an existing home and life insurance agent portals. Mentored in Android and iOS development, testing, and deployment.",
     "highlights": [
       "Provided support for Home Lines Agent Portal application utilizing Java technologies",
-      "Migrated internal Life Insurance Workflow system from VB to C# along with a unit test suite",
+      "Migrated the internal Life Insurance Workflow system from VB to C# along with creating a unit test suite",
       "Mentored in Android and iOS development, testing, and deployment for the Motorists Insurance and Iowa Insurance mobile applications; https://itunes.apple.com/us/app/motorists-mutual-mobile/id503935355?mt=8, https://play.google.com/store/apps/details?id=com.motorists&hl=en"
     ]
   },{
@@ -113,7 +113,7 @@
     "website": "http://www.goodinelectric.com/",
     "startDate": "2000",
     "endDate": "2012",
-    "summary": "Working in both commercial and industrial environments, I was a lead foreman on over 20 different projects with varying ranges from 2 to 12 people.",
+    "summary": "Lead foreman on over 20 different projects, both commercial and industrial environments, with varying team sizes, ranging from 2 to 12 people.",
     "highlights": [
       "Installation of a diverse set of electrical systems",
       "Collaborated on design and installation of multiple types of motor control applications",
@@ -126,6 +126,7 @@
     "studyType": "Bachelor of Science",
     "startDate": "2007-06",
     "endDate": "2011-07",
+    "location": "Columbus, OH",
     "gpa": "3.96"
   }],
   "certifications": [{
