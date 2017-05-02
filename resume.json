@@ -35,6 +35,7 @@
   "work": [{
     "company": "The Wendy’s Company",
     "position": "Lead Mobile Application Architect, eCommerce",
+    "location": "Columbus, OH",
     "website": "http://wendys.com",
     "startDate": "2015-06",
     "endDate": "present",
@@ -48,6 +49,7 @@
   },{
     "company": "The Wendy’s Company",
     "position": "Senior Application Developer, eCommerce",
+    "location": "Columbus, OH",
     "website": "http://wendys.com",
     "startDate": "2014-11",
     "endDate": "2015-06",
@@ -61,6 +63,7 @@
   },{
     "company": "Lucky 13 Technologies, LLC.",
     "position": "Owner, Lead Developer",
+    "location": "Columbus, OH",
     "website": "http://lucky13.technology",
     "startDate": "2014-10",
     "endDate": "present",
@@ -73,6 +76,7 @@
   },{
     "company": "Leading EDJE, LLC.",
     "position": "Solutions Developer",
+    "location": "Columbus, OH",
     "website": "http://leadingedje.com/",
     "startDate": "2013-02",
     "endDate": "2014-11",
@@ -86,6 +90,7 @@
   },{
     "company": "Motorists Insurance Group",
     "position": "Developer",
+    "location": "Columbus, OH",
     "website": "https://www.motoristsinsurancegroup.com/who-we-are/affiliates/motorists-mutual",
     "startDate": "2013-02",
     "endDate": "2011-06",
@@ -98,6 +103,7 @@
   },{
     "company": "DesignLinx, LLC.",
     "position": "Partner, Application Developer",
+    "location": "Newark, OH",
     "website": "",
     "startDate": "2012",
     "endDate": "2013",
@@ -110,6 +116,7 @@
   },{
     "company": "Goodin Electric",
     "position": "Electrical Journeyman, Foreman",
+    "location": "Newark, OH",
     "website": "http://www.goodinelectric.com/",
     "startDate": "2000",
     "endDate": "2012",

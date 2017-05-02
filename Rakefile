@@ -99,7 +99,7 @@ namespace :parser do
       if !work_fmt.empty?
         work_fmt += "\n"
       end
-      work_fmt += "#{job['startDate']} - #{job['endDate']}\n#{job['position']}\n#{job['company']}#{fmt_website}\n#{job['summary']}\n#{fmt_highlights}\n"
+      work_fmt += "#{job['startDate']} - #{job['endDate']}\n#{job['position']}\n#{job['company']}#{fmt_website}\n#{job['location']}\n#{job['summary']}\n#{fmt_highlights}\n"
     }
     return replace_data_with_value  'work', work_fmt, file_data
   end
@@ -180,16 +180,6 @@ namespace :file_management do
 
 end
 
-task :generate_resume do
-  template = PLAIN_TEXT_TEMPLATE
-  copy_template template, OUTPUT_DIR
-  require 'json'
-  parsed_json = load_json RESUME_INPUT
-  formatted_data = format_template_data template, parsed_json
-  working_file = extract_file_name template
-  write_data formatted_data, "#{OUTPUT_DIR}#{working_file}"
-end
-
 task :clean do
   rm_rf OUTPUT_DIR
 end
@@ -207,4 +197,57 @@ def copy_template(template, output_dest)
   file_name = extract_file_name template
   create_output output_dest
   cp template, "#{output_dest}#{file_name}"
+end
+
+namespace :resume do |args|
+  desc "Generates a resume.package"
+  task :generate do
+
+    # USAGE: rake programs:download -- rm
+    #-- Setting options $ rake programs:download -- --rm
+    options = {
+      type: 'all',
+      output_dir: 'output/',
+      input_file: 'resume.json',
+      readme_template: 'README.md.template',
+      txt_template: 'Resume.txt.template'
+    }
+    option_parser = OptionParser.new
+    option_parser.banner = "Usage: rake resume:generate -- t"
+    option_parser.on("-t TYPE", "--type TYPE", String, "Specifies the type of resume to generate") do |type|
+      if type == 'txt' || type == 'readme'
+        options[:type] = type
+      end
+    end
+    args = option_parser.order!(ARGV) {}
+    option_parser.parse!(args)
+    #-- end
+    if options[:type] == 'all'
+      options[:template] = options[:readme_template]
+      generate_resume options
+      options[:template] = options[:txt_template]
+      generate_resume options
+      cp options[:input_file], options[:output_dir]
+    elsif options[:type] == 'txt'
+      options[:template] = options[:txt_template]
+      generate_resume options
+    elsif options[:type] == 'readme'
+      options[:template] = options[:readme_template]
+      generate_resume options
+    elsif options[:type] == 'json'
+      cp options[:input_file], options[:output_dir]
+    end
+    exit
+  end
+
+  def generate_resume(opts)
+    template = opts[:template]
+    copy_template template, opts[:output_dir]
+    require 'json'
+    parsed_json = load_json opts[:input_file]
+    formatted_data = format_template_data template, parsed_json
+    working_file = extract_file_name template
+    write_data formatted_data, "#{opts[:output_dir]}#{working_file}"
+  end
+
 end
