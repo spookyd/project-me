@@ -1,13 +1,7 @@
 #!/bin/ruby
 require 'optparse'
 
-RESUME_INPUT='Resume.json'
-
-README_TEMPLATE='README.md.template'
-PLAIN_TEXT_TEMPLATE='resume.txt.template'
-
-OUTPUT_DIR='output/'
-BORDER='--------------------------------------------------------------------------------'
+BORDER='----------------------------------------------------------------------'
 
 namespace :parser do
 
@@ -248,6 +242,14 @@ namespace :resume do |args|
     formatted_data = format_template_data template, parsed_json
     working_file = extract_file_name template
     write_data formatted_data, "#{opts[:output_dir]}#{working_file}"
+  end
+
+  def package()
+
+  end
+
+  def deploy()
+
   end
 
 end
