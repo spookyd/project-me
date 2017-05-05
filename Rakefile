@@ -160,6 +160,10 @@ namespace :file_management do
     FileUtils.cp from to
   end
 
+  def cp_recursive(from, to)
+    FileUtils.cp_r from to
+  end
+
   def write_data(data, file_name)
     puts "Writing data #{data} to #{file_name}"
     # open the file for writing
@@ -176,6 +180,28 @@ end
 
 task :clean do
   rm_rf OUTPUT_DIR
+end
+
+namespace :assets do
+
+  desc 'Bundles assets for deployment'
+  task :bundle do |args|
+    options = {
+      output_dir: 'output/'
+    }
+    option_parser = OptionParser.new
+    option_parser.banner = "Usage: rake resume:generate -- t"
+    option_parser.on("-o OUTPUT", "--output OUTPUT", String, "Specifies the output directory") do |output|
+      options[:output_dir] = output
+    end
+    args = option_parser.order!(ARGV) {}
+    option_parser.parse!(args)
+
+    create_output "#{options[:output_dir]}"
+    cp_r 'assets/', "#{options[:output_dir]}."
+
+  end
+
 end
 
 def format_template_data(template_file, parsed_json)
