@@ -9,7 +9,7 @@
   "basics": {
     "name": "Luke Davis",
     "label": "Software Developer",
-    "picture": "luke_davis.JPG",
+    "picture": "luke_davis_profile.png",
     "email": "lpdavis13@gmail.com",
     "emailIcon": "ic_email_white.png",
     "phone": "(740)334-8424",
@@ -43,7 +43,7 @@
     "position": "Lead Mobile Application Architect, eCommerce",
     "location": "Columbus, OH",
     "website": "http://wendys.com",
-    "startDate": "2015-06",
+    "startDate": "06/2015",
     "endDate": "present",
     "summary": "One of the lead engineers on the Wendy's eCommerce Application Development team with primary focus on the iOS and Android platforms. Provide technical guidance on best development and Scrum practices across the eCommerce Application Department.",
     "highlights": [
@@ -57,8 +57,8 @@
     "position": "Senior Application Developer, eCommerce",
     "location": "Columbus, OH",
     "website": "http://wendys.com",
-    "startDate": "2014-11",
-    "endDate": "2015-06",
+    "startDate": "11/2014",
+    "endDate": "06/2015",
     "summary": "Joined Wendy's to assist in forming and leading a new eCommerce development team as part of the new Wendy's innovation space, 90º Labs. Worked with the department Director and other lead engineers to establish the foundation of the new department",
     "highlights": [
       "Developed a Kiosk POC, which has led to the self-ordering kiosks that are deployed today",
@@ -71,7 +71,7 @@
     "position": "Owner, Lead Developer",
     "location": "Columbus, OH",
     "website": "http://lucky13.technology",
-    "startDate": "2014-10",
+    "startDate": "10/2014",
     "endDate": "present",
     "summary": "Partner with software firms to build custom mobile applications and backend services for customers such as Scotts® and Bold Penguin.",
     "highlights": [
@@ -84,8 +84,8 @@
     "position": "Solutions Developer",
     "location": "Columbus, OH",
     "website": "http://leadingedje.com/",
-    "startDate": "2013-02",
-    "endDate": "2014-11",
+    "startDate": "02/2013",
+    "endDate": "11/2014",
     "summary": "Member of a solutions delivery team, which provided expertise in custom applications development and business solutions utilizing leading edge technologies.",
     "highlights": [
       "Developed new features on a client/admin portal project utilizing Java backend and frontend technologies",
@@ -98,8 +98,8 @@
     "position": "Developer",
     "location": "Columbus, OH",
     "website": "https://www.motoristsinsurancegroup.com/who-we-are/affiliates/motorists-mutual",
-    "startDate": "2013-02",
-    "endDate": "2011-06",
+    "startDate": "02/2013",
+    "endDate": "06/2011",
     "summary": "Supported and developed new features for an existing home and life insurance agent portals. Mentored in Android and iOS development, testing, and deployment.",
     "highlights": [
       "Provided support for Home Lines Agent Portal application utilizing Java technologies",
@@ -137,30 +137,30 @@
     "institution": "DeVry University",
     "area": "Computer Engineering Technologies",
     "studyType": "Bachelor of Science",
-    "startDate": "2007-06",
-    "endDate": "2011-07",
+    "startDate": "06/2007",
+    "endDate": "07/2011",
     "location": "Columbus, OH",
     "gpa": "3.96"
   }],
   "certifications": [{
     "title": "Professional Scrum Master™ level I (PSM I)",
-    "date": "2014-08-18",
+    "date": "08/18/2014",
     "awarder": "Scrum.org",
     "summary": "People who have passed PSM I, achieving certification, demonstrate a fundamental level of Scrum mastery. PSM I certificate holders prove that they understand Scrum as described in the Scrum Guide and the concepts of applying Scrum.  PSM I holders have a consistent terminology and approach to Scrum."
   },{
     "title": "Professional Scrum Developer™ (PSD)",
-    "date": "2013-08-16",
+    "date": "08/16/2013",
     "awarder": "Scrum.org",
     "summary": "The Professional Scrum Developer™ (PSD) assessment is available to anyone who wishes to validate their knowledge of how to build complex software products using Scrum. Those that pass the assessment will receive the industry recognized PSD Certification to demonstrate their mastery of the content."
   },{
     "title": "OCPJP (Oracle Certified Professional Java Programmer)",
-    "date": "2013-07-19",
+    "date": "07/19/2013",
     "awarder": "Oracle",
     "summary": "An Oracle Certified Professional, Java SE 6 Programmer has experience using the Java programming language, understands the basic syntax and structure of the Java programming language and can create Java technology applications that run on server and desktop systems using J2SE 6.0."
   }],
   "awards": {
     "title": "The \"Do the Right Thing\" award",
-    "date": "2013-08-16",
+    "date": "2015",
     "awarder": "The Wendy's Company",
     "summary": ""
   },
