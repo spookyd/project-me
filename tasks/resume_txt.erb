@@ -1,0 +1,49 @@
+# <%= @resume[:basics][:name] %>
+
+**<%= @resume[:basics][:label] %>**
+
+---
+
+<%= @resume[:basics][:location][:address] %>
+<%= @resume[:basics][:location][:city] %>, <%= @resume[:basics][:location][:region] %> <%= @resume[:basics][:location][:postalCode] %>
+Phone: <%= @resume[:basics][:phone] %>
+E-mail: <%= @resume[:basics][:email] %>
+<<basics.profiles>>
+
+## SUMMARY
+
+---
+
+*<<basics.summary>>*
+
+## SKILLS
+
+---
+
+<<skills>
+  for_each(<<skill.name>>: <<skill.keywords>>)
+>
+
+## EXPERIENCE
+
+---
+
+<<work>>
+
+## CERTIFICATIONS
+
+---
+
+<<certifications>>
+
+## EDUCATION
+
+---
+
+<<education>>
+
+## INTERESTS
+
+---
+
+<<interests>>

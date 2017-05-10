@@ -136,6 +136,10 @@ namespace :parser do
     "#{parent}.#{child}"
   end
 
+  def extract_loop_pattern()
+
+  end
+
   def replace_data_with_value(key, value, file_data)
     return file_data.gsub("<<#{key}>>", value)
   end
@@ -147,7 +151,7 @@ namespace :file_management do
   require 'fileutils'
 
   def load_json(file)
-    return JSON.parse(File.read(file))
+    return JSON.parse(File.read(file), :symbolize_names => true)
   end
 
   def create_output(directory)
@@ -217,6 +221,14 @@ def copy_template(template, output_dest)
   file_name = extract_file_name template
   create_output output_dest
   cp template, "#{output_dest}#{file_name}"
+end
+
+task :test do
+  require 'json'
+  require_relative './tasks/resume_txt_generator.rb'
+  json = JSON.parse(File.read('resume.json'), :symbolize_names => true)
+  g = ResumeTxtGenerator.new(json, File.read('./tasks/resume_txt.erb'))
+  puts "#{g.render}"
 end
 
 namespace :resume do |args|
