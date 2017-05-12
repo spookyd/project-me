@@ -1,7 +1,7 @@
 #!/bin/ruby
 require 'erb'
 
-class ResumeTxtGenerator
+class ResumeGenerator
   include ERB::Util
   attr_accessor :resume
   def initialize(resume, template)
@@ -9,6 +9,6 @@ class ResumeTxtGenerator
     @template = template
   end
   def render()
-    ERB.new(@template).result(binding)
+    ERB.new(@template, nil, '-').result(binding)
   end
 end

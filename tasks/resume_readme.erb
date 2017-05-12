@@ -1,6 +1,8 @@
-<% @border = '-----------------------------------------------------------------------------' -%>
-<%= @resume[:basics][:name] %>
-<%= @resume[:basics][:label] %>
+# <%= @resume[:basics][:name] %>
+
+**<%= @resume[:basics][:label] %>**
+
+---
 
 <%= @resume[:basics][:location][:address] %>
 <%= @resume[:basics][:location][:city] %>, <%= @resume[:basics][:location][:region] %> <%= @resume[:basics][:location][:postalCode] %>
@@ -10,24 +12,24 @@ E-mail: <%= @resume[:basics][:email] %>
 <%= @profile[:network] %>: <%= @profile[:url] %>
 <% end -%>
 
-<%= @border %>
-SUMMARY
-<%= @border %>
+## SUMMARY
 
-<%= @resume[:basics][:summary] %>
+---
 
-<%= @border %>
-SKILLS
-<%= @border %>
+*<%= @resume[:basics][:summary] %>*
+
+## SKILLS
+
+---
 
 <% for @skill in @resume[:skills] -%>
 <% @keywords = @skill[:keywords].reduce('') { |keywords, keyword| keywords.to_s.empty? ? "#{keyword}" : "#{keywords}, #{keyword}" } -%>
 <%= @skill[:name] %>: <%= @keywords %>
 <% end -%>
 
-<%= @border %>
-EXPERIENCE
-<%= @border %>
+## EXPERIENCE
+
+---
 
 <% for @job in @resume[:work] %>
 <%= @job[:startDate] %> to <%= @job[:endDate] %>
@@ -38,18 +40,20 @@ EXPERIENCE
 <%= @highlights = @job[:highlights].reduce('') { |highlights, highlight| "#{highlights}\n* #{highlight}" } %>
 <% end %>
 
-<%= @border %>
-CERTIFICATIONS
-<%= @border %>
+## CERTIFICATIONS
+
+---
+
 <% for @cert in @resume[:certifications] %>
 <%= @cert[:date] %>
 <%= @cert[:title] %>
 <%= @cert[:awarder] %>
 <% end %>
 
-<%= @border %>
-EDUCATION
-<%= @border %>
+## EDUCATION
+
+---
+
 <% for @education in @resume[:education] %>
 <%= @education[:startDate] %> to <%= @education[:endDate] %>
 <%= @education[:studyType] %>, <%= @education[:area] %>
@@ -57,9 +61,10 @@ EDUCATION
 GPA: <%= @education[:gpa] %>
 <% end %>
 
-<%= @border %>
-INTERESTS
-<%= @border %>
+## INTERESTS
+
+---
+
 <% for @interest in @resume[:interests] %>
 <% @keywords = @interest[:keywords].reduce('') { |keywords, keyword| keywords.to_s.empty? ? "#{keyword}" : "#{keywords}, #{keyword}" } -%>
 <%= @interest[:name] %>: <%= @keywords %>
