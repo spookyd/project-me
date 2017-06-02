@@ -1,0 +1,71 @@
+# <%= @resume[:basics][:name] %>
+
+**<%= @resume[:basics][:label] %>**
+
+---
+
+<%= @resume[:basics][:location][:address] %>
+<%= @resume[:basics][:location][:city] %>, <%= @resume[:basics][:location][:region] %> <%= @resume[:basics][:location][:postalCode] %>
+Phone: <%= @resume[:basics][:phone] %>
+E-mail: <%= @resume[:basics][:email] %>
+<% for @profile in @resume[:basics][:profiles] -%>
+<%= @profile[:network] %>: <%= @profile[:url] %>
+<% end -%>
+
+## SUMMARY
+
+---
+
+*<%= @resume[:basics][:summary] %>*
+
+## SKILLS
+
+---
+
+<% for @skill in @resume[:skills] -%>
+<% @keywords = @skill[:keywords].reduce('') { |keywords, keyword| keywords.to_s.empty? ? "#{keyword}" : "#{keywords}, #{keyword}" } -%>
+<%= @skill[:name] %>: <%= @keywords %>
+<% end -%>
+
+## EXPERIENCE
+
+---
+
+<% for @job in @resume[:work] %>
+<%= @job[:startDate] %> to <%= @job[:endDate] %>
+<%= @job[:position] %>
+<%= @job[:company] %> <%= @job[:website].to_s.empty? ? '' : " - #{@job[:website]}"  %>
+<%= @job[:location] %>
+<%= @job[:summary] %>
+<%= @highlights = @job[:highlights].reduce('') { |highlights, highlight| "#{highlights}\n* #{highlight}" } %>
+<% end %>
+
+## CERTIFICATIONS
+
+---
+
+<% for @cert in @resume[:certifications] %>
+<%= @cert[:date] %>
+<%= @cert[:title] %>
+<%= @cert[:awarder] %>
+<% end %>
+
+## EDUCATION
+
+---
+
+<% for @education in @resume[:education] %>
+<%= @education[:startDate] %> to <%= @education[:endDate] %>
+<%= @education[:studyType] %>, <%= @education[:area] %>
+<%= @education[:institution] %>
+GPA: <%= @education[:gpa] %>
+<% end %>
+
+## INTERESTS
+
+---
+
+<% for @interest in @resume[:interests] %>
+<% @keywords = @interest[:keywords].reduce('') { |keywords, keyword| keywords.to_s.empty? ? "#{keyword}" : "#{keywords}, #{keyword}" } -%>
+<%= @interest[:name] %>: <%= @keywords %>
+<% end -%>
