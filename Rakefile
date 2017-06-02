@@ -45,7 +45,7 @@ namespace :assets do
       output_dir: 'output/'
     }
     option_parser = OptionParser.new
-    option_parser.banner = "Usage: rake resume:generate -- t"
+    option_parser.banner = "Usage: rake assets:bundle -- t"
     option_parser.on("-o OUTPUT", "--output OUTPUT", String, "Specifies the output directory") do |output|
       options[:output_dir] = output
     end
