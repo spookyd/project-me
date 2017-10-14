@@ -47,6 +47,7 @@
     "endDate": "present",
     "summary": "Partnering with software firms to build custom mobile applications and backend services for customers such as Scotts® and Bold Penguin.",
     "highlights": [
+      "Designed and implemented features providing in app audio/video chat capabilities for a social networking platform",
       "Developed a custom Android based door to door sales app which allowed for card present credit card transactions",
       "Provided support for existing PHP application used for sales rep management",
       "Created an API only Rails 5 application used for an insurance eligibility rules engine"
