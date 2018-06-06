@@ -19,11 +19,11 @@
     "summary": "Self-driven individual with unmatched passion to solve business needs utilizing new technologies while continuing to hone software craftsmanship",
     "about": "My interest in technology started as far back as I can remember. I was the type of kid that would ask for a Walkman and have it disassembled in a matter of minutes, just to see how it worked. I wrote my first program in a high school robotics class. From that moment on I have been fascinated with electronics, software, and connecting the two together. After graduating high school, I decided to go straight into a career path. A great area, which I felt, was a blend of both areas of interest would be working as an electrician. I spent the next 12 years working, primarily on, commercial and industrial electrical installation projects. The projects ranged anywhere from automated lighting systems to industrial scale recycling automation. About 8 years into my career, as an electrician, I felt that I needed to take myself to the next level and focus more on the software aspect. So, I went back to school full-time. Directly out of college I got a job with an insurance company as a developer. This was about the same time as the advent of smart phones. After my first mobile project I found myself very attracted to developing on mobile platforms. The primary reason being it is an intimate technology where we, as developers, get the opportunity to directly impact a user's life. I have since worked on many iOS and Android projects, most recently and notably the Wendy's Mobile Ordering application. Throughout the years I have worked on many aspects of the technology stack ranging from Bluetooth 4 to back-end services and databases. In my free time I like developing anything IoT related, wood working, traveling, hiking, and spending time with my family.",
     "location": {
-      "address": "297 Sumption Dr.",
-      "postalCode": "43230",
-      "city": "Columbus",
+      "address": "227 E Street",
+      "postalCode": "94063",
+      "city": "Redwood City",
       "countryCode": "US",
-      "region": "Ohio",
+      "region": "California",
       "icon": "ic_location_on_white.png"
     },
     "profiles": [{
@@ -38,7 +38,21 @@
       "icon": "GitHub-Mark_white.png"
     }]
   },
-  "work": [{
+  "work": [{ 
+    "company": "ZeeMee",
+    "position": "Senior iOS Engineer",
+    "location": "Redwood City, CA",
+    "website": "https://www.zeemee.com",
+    "startDate": "11/2017",
+    "endDate": "present",
+    "summary": "Senior engineer on the iOS team providing technical support and new features for a mobile application which allows colleges to engage with students.",
+    "highlights": [
+      "Optimized client side GraphQL queries by establishing patterns and client setup based on best practices",
+      "Increased user retention by 50% through implementation of a flexible notification system, which uses a custom router, allowing easy addition of multiple types of notifications as well as deep linking",
+      "Successfully integrated a new ejabberd chat client, allowing for direct communications between colleges and students",
+      "Added a custom live streaming solution enabling both broadcasting and viewing from the user's mobile device"
+    ]
+  },{
     "company": "Lucky 13 Technologies, LLC.",
     "position": "Owner, Lead Developer",
     "location": "Columbus, OH",
@@ -173,7 +187,7 @@
       "Objective C",
       "XCTest",
       "Carthage",
-      "Alamofire"
+      "Apollo"
     ]
   },{
     "name": "Android Development",
@@ -191,7 +205,7 @@
       "Node.js (Express)",
       "ES5/ES6",
       "Ruby on Rails 5",
-      "Spring",
+      "GraphQL",
       "Docker"
     ]
   },{
