@@ -38,13 +38,27 @@
       "icon": "GitHub-Mark_white.png"
     }]
   },
-  "work": [{ 
+  "work": [{
+    "company": "StubHub",
+    "position": "Lead iOS Engineer",
+    "location": "San Fransisco, CA",
+    "website": "https://www.stubhub.com",
+    "startDate": "05/2019",
+    "endDate": "present",
+    "summary": "Enhancing the buyer experience as the Lead iOS engineer for the Fan Marketplace.",
+    "highlights": [
+      "Championed the use of Swift, Clean architecture and unified naming conventions ultimately aligning our team standards",
+      "Spearheaded rewrite efforts of the Discover flow which enabled reduced configuration time from 2 weeks to 2 hours",
+      "Modularized 60% of existing discover features, allowing for easier testing and a 191% increase in unit test coverage",
+      "Mentored engineers by teaching mobile architecture, design patterns, Swift paradigms and soft skills"
+    ]
+  },{
     "company": "ZeeMee",
     "position": "Senior iOS Engineer",
     "location": "Redwood City, CA",
     "website": "https://www.zeemee.com",
     "startDate": "11/2017",
-    "endDate": "present",
+    "endDate": "05/2019",
     "summary": "Senior engineer on a small iOS team providing technical support and new features for ZeeMee’s mobile application.",
     "highlights": [
       "Identified UI performance bottlenecks and executed plan of action to improve video feed",
@@ -173,7 +187,7 @@
     "name": "Programming Languages",
     "level": "Proficient",
     "keywords": [
-      "Swift 4",
+      "Swift",
       "Objective C",
       "Java",
       "Ruby"
@@ -194,11 +208,9 @@
     "level": "Proficient",
     "keywords": [
       "Apollo-ios",
-      "JSQMessageViewController",
+      "RxSwift",
       "Alamofire",
-      "AlamofireImage",
-      "XMPP Framework",
-      "Lottie-ios"
+      "AlamofireImage"
     ]
   },{
     "name": "Network",
@@ -225,8 +237,7 @@
       "XCTest",
       "Quick",
       "Nimble",
-      "Cucumber",
-      "RSpec"
+      "XCUITest"
     ]
   },{
     "name": "Development Tools",
@@ -235,13 +246,13 @@
       "Xcode",
       "AppCode",
       "Carthage",
-      "CocoaPods"
+      "CocoaPods",
+      "Vim"
     ]
   },{
     "name": "Clean Code",
     "level": "Master",
     "keywords": [
-      "SwiftLint",
       "Object Oriented Design",
       "SOLID",
       "Protocol Oriented Design",
@@ -253,6 +264,7 @@
     "keywords": [
       "Git",
       "Scrum",
+      "Bitrise",
       "Jenkins",
       "Travis CI",
       "Markdown",
@@ -291,7 +303,7 @@
     "name": "Other",
     "keywords": [
       "Woodworking",
-      "iOS Development"
+      "Digital Art"
     ]
   }]
 }
